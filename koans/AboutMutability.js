@@ -16,7 +16,7 @@ describe("About Mutability", function() {
     var aPerson = new Person ("John", "Smith");
     aPerson.firstname = "Alan";
     
-    expect(aPerson.firstname).toBe(Alan);
+    expect(aPerson.firstname).toBe('Alan');
   });
 
   it("should expect prototype properties to be public and mutable", function () {

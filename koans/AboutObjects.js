@@ -23,7 +23,7 @@ describe("About Objects", function() {
       mastermind : "Brain", 
       henchman: "Pinky",
       battleCry: function(noOfBrains) {
-        return "They are " + this.henchman + " and the" +
+        return "The " + this.henchman + " and the" +
           Array(noOfBrains + 1).join(" " + this.mastermind);
       }
     };
@@ -55,7 +55,7 @@ describe("About Objects", function() {
         mastermind: "The Monarch", 
         henchwoman: "Dr Girlfriend",
         theBomb: true,
-        theDetonator: false
+        // deleted the property, checking for existence, not boolean!
       };
     });
 
@@ -73,7 +73,7 @@ describe("About Objects", function() {
   });     //  added theDetonator property and set to false
 
   it("should know that properties can be added and deleted", function() {
-    var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
+    var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith", secretarry: };
 
     expect("secretary" in meglomaniac).toBe(undefined);
 

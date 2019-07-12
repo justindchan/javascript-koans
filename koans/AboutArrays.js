@@ -26,8 +26,8 @@ describe("About Arrays", function() {
     array[1] = 2;
     expect(array).toEqual([1, 2]);
     
-    array.push(3);
-    expect(array).toEqual([3]);
+    array.push([3]);
+    expect(array[2]).toEqual([3]);
   });     // referencing array literals, brackets
 
   it("should understand array length", function() {
@@ -91,7 +91,7 @@ describe("About Arrays", function() {
     array.unshift(3);
     expect(array).toEqual([3, 1, 2]);
     
-    var shiftedValue = array.shift();
+    var shiftedValue = [array.shift()];
     expect(shiftedValue).toEqual([3]);
     expect(array).toEqual([1, 2]);
   });  
