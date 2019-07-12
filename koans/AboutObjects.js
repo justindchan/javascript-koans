@@ -73,15 +73,15 @@ describe("About Objects", function() {
   });     //  added theDetonator property and set to false
 
   it("should know that properties can be added and deleted", function() {
-    var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith", secretarry: };
+    var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith"};
 
-    expect("secretary" in meglomaniac).toBe(undefined);
+    expect("secretary" in meglomaniac).toBe(false);
 
     meglomaniac.secretary = "Agent Smith";
-    expect("secretary" in meglomaniac).toBe('Agent Smith');
+    expect("secretary" in meglomaniac).toBe(true);
     
     delete meglomaniac.henchman;
-    expect("henchman" in meglomaniac).toBe(undefined);
+    expect("henchman" in meglomaniac).toBe(false);
   });
 
 
